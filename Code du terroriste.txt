@@ -1,0 +1,36 @@
+First name:<br>
+<form action="/"><input type="text" id="txtfirstname" name="firstname" value="Mickey"><br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse"><br><br>
+    <input type="submit" value="Submit">
+    Je suis un terroriste <input id="chkTerrorist" type="checkbox" name="terroriste"><br><br>
+</form>
+</body>
+<script>
+    function chkTerroristClick() {
+        alert("Vraiment ?")
+    }
+
+    function chkTerroristClick() {
+        if (chkTerrorist.checked) {
+            alert("Attention Donald, " + txtfirstname.value + " est un terroriste !")
+        }
+    }
+
+    chkTerrorist.addEventListener('click', chkTerroristClick)
+
+
+
+
+    /*
+    firstname = 'Berthe'
+    age = prompt("Quel age a " + firstname)
+    for (i = 16; i < 25; i++) {
+        if (i >= 18) {
+            alert("Bonjour madame " + firstname)
+        }
+        else {
+            alert("Bonjour mademoiselle " + firstname)
+        }
+    }
+     */
