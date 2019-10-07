@@ -1,12 +1,10 @@
 div {
-    padding : 5px;
+    padding: 5px;
     margin: 5px;
     border: solid 1px black;
     width: fit-content;
 }
+
 .classdiv3 {
-    font-family : Arial;
-}
-.classdiv4{
     font-family: Arial;
 }
