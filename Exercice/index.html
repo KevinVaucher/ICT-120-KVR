@@ -21,16 +21,16 @@
 </div>
 <h2>5. Détruire / Ajouter des éléments</h2>
 <div>
-    Quand on clique sur ce texte, ça détruit
-    <div>cette div</div>
+    <span id="div5">Quand on clique sur ce texte, ça détruit</span>
+    <div id="div5del">cette div</div>
 </div>
 <h2>6. Gérer la valeur d'un élément du DOM</h2>
 <div>
     Quand l'utilisateur tape son nom, le champ initiales se remplit automatiquement
     <form>
-        Nom: <input name="txtName" type="text"><br>
-        Initiales: <input name="txtInitials" type="text"><br>
-        <input type="submit" value="Ok">
+        Nom: <input name="txtName" type="text" id="txtName"><br>
+        Initiales: <input name="txtInitials" type="text" id="txtInitials"><br>
+        <input type="submit" value="Ok" id="cmdSendForm">
     </form>
 </div>
 <h2>7. Modifier des attributs d'éléments, Utiliser un timer, Cacher/Montrer un élément</h2>
@@ -71,11 +71,11 @@
             </ul>
         </li>
     </ul>
-    <button>A vos marques</button>
-    <button>Prêt</button>
-    <button>Partez</button>
+    <button id="cmdMarks">A vos marques</button>
+    <button id="cmdSet">Prêt</button>
+    <button id="cmdGo">Partez</button>
     <br>
-    <img src="empty.png">
+    <img src="Images\empty.png" id="image">
 </div>
 </body>
 </html>
