@@ -46,14 +46,33 @@ function Initials() {
 
 function ChangeMarks() {
     image.src = "Images/marks.png"
+    cmdMarks.disabled = true
+    cmdSet.disabled = false
+    cmdGo.style.visibility = "visible"
+    cmdGo.disabled = true
 }
 
 function ChangeSet() {
     image.src = "Images/set.png"
+    cmdMarks.style.visibility = "hidden"
+    cmdSet.disabled = true
+    cmdGo.disabled = false
 }
 
 function ChangeGo() {
     image.src = "Images/go.png"
+    cmdMarks.style.visibility = "hidden"
+    cmdSet.style.visibility = "hidden"
+    cmdGo.disabled = true
+    setTimeOut(ResetEx7, 3000)
+}
+
+function ResetEx7() {
+    image.src = "Images/empty.png"
+    cmdMarks.style.visiblity = "visible"
+    cmdSet.disabled = true
+    cmdGo.style.visibility = "hidden"
+    alert("Ok")
 }
 
 function init() {
@@ -68,4 +87,6 @@ function init() {
     cmdMarks.addEventListener("click", ChangeMarks)
     cmdSet.addEventListener("click", ChangeSet)
     cmdGo.addEventListener("click", ChangeGo)
+    cmdSet.disabled = true
+    cmdGo.style.visibility = "hidden"
 }
