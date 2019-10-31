@@ -1,0 +1,16 @@
+#logocpnv {
+    height: 60px;
+    width: 150px;
+}
+
+#maintitle {
+    text-align:center;
+}
+
+.divCategories{
+    text-align: center;
+}
+.cmdCategories{
+    width: 130px;
+    height: 50px;
+}
