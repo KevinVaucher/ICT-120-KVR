@@ -1,14 +1,15 @@
 #logocpnv {
-    height: 60px;
-    width: 150px;
+    height: 70px;
+    width: 140px;
 }
 
 #maintitle {
-    text-align:center;
+
 }
 
 .divCategories{
     text-align: center;
+    vertical-align: top;
 }
 
 .cmdCategories{
