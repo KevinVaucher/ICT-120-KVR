@@ -5,6 +5,7 @@ Description : Page internet pour le module ICT-120
 Version : 1.0
  */
 
+
 #logocpnv {
     height: 85px;
     width: 170px;
@@ -17,7 +18,7 @@ Version : 1.0
 
 .cmdCategories {
     text-align: center;
-    width: 19.775%;
+    width: 19.77%;
     background-color: #34ce57;
     vertical-align: middle;
     height:55px;
@@ -45,4 +46,8 @@ ul {
     margin-top: 100px;
     margin-left : 380px;
     height:500px;
+}
+
+.bot{
+    vertical-align:bottom;
 }
