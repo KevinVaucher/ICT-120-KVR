@@ -1,18 +1,48 @@
+/*
+Auteur : Kevin Vaucher
+Date : 04.11.2019
+Description : Page internet pour le module ICT-120
+Version : 1.0
+ */
+
 #logocpnv {
-    height: 70px;
-    width: 140px;
+    height: 85px;
+    width: 170px;
 }
 
 #maintitle {
-
-}
-
-.divCategories{
     text-align: center;
-    vertical-align: top;
+    margin-top: -70px;
 }
 
-.cmdCategories{
-    width: 130px;
-    height: 50px;
+.cmdCategories {
+    text-align: center;
+    width: 19.775%;
+    background-color: #34ce57;
+    vertical-align: middle;
+    height:55px;
+}
+
+#divphoto {
+    float: left;
+    vertical-align: middle;
+    margin-top: 100px;
+}
+
+body {
+    padding: 20px 0px 0px 0px;
+}
+
+ul {
+    text-align: left;
+    display: inline;
+    padding: 15px 4px 17px 0;
+    list-style: none;
+}
+
+#divContenu {
+    border: 1px solid;
+    margin-top: 100px;
+    margin-left : 380px;
+    height:500px;
 }

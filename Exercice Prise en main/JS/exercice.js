@@ -28,11 +28,11 @@ function CheckboxCheck() { // Fonction exercice 4 - Changer le texte d'une div +
     }
 }
 
-function Delete() {
+function Delete() { // Exercice 5, pouvoir supprimer la div
     div5del.style.display = "none"
 }
 
-function Initials() {
+function Initials() { // Exercice 6
     initiales = ""
     longueur = 0
     space = ""
@@ -43,8 +43,9 @@ function Initials() {
     initiales += txtName.value.substr(longueur - 1, 1)
     txtInitials.value = initiales.toUpperCase()
 }
+// Exercice 7
 
-function ChangeMarks() {
+function ChangeMarks() { // Changer l'image en "à vos marques" et les boutons
     image.src = "Images/marks.png"
     cmdMarks.disabled = true
     cmdSet.disabled = false
@@ -52,14 +53,14 @@ function ChangeMarks() {
     cmdGo.disabled = true
 }
 
-function ChangeSet() {
+function ChangeSet() { // Changer l'image en "prêt" et les boutons
     image.src = "Images/set.png"
     cmdMarks.style.visibility = "hidden"
     cmdSet.disabled = true
     cmdGo.disabled = false
 }
 
-function ChangeGo() {
+function ChangeGo() { // Changer l'image en "partez" et les boutons
     image.src = "Images/go.png"
     cmdMarks.style.visibility = "hidden"
     cmdSet.style.visibility = "hidden"
@@ -67,7 +68,7 @@ function ChangeGo() {
     setTimeout(ResetEx7, 3000)
 }
 
-function ResetEx7() {
+function ResetEx7() { // Remettre l'image et les boutons à 0
     image.src = "Images/empty.png"
     cmdMarks.disabled = false;
     cmdMarks.style.display="inline";
@@ -77,7 +78,7 @@ function ResetEx7() {
     alert("Ok")
 }
 
-function init() {
+function init() { // Charger les valeurs de cette fonction dès le démarrage (en lien avec la première ligne du code "DOMContentLoaded")
     div1.addEventListener("click", Blue)
     div2.addEventListener("click", Clean)
     div3.addEventListener("mouseover", Arial)

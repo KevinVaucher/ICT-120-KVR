@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<title>HTML: Lists</title>
+
+<style>
+	h2
+	{
+		color: rgb(0, 0, 0);
+	}
+	h2.body
+	{
+		background-color: rgb(0, 0, 0); <!-- couleur de fond -->
+		width: 100%;			<!-- largeur -->
+		height:0px;			<!-- hauteur -->
+		position:absolute,relative,fixed;	<!-- position fixe ou adaptive -->
+		top: 0px;			<!-- position depuis le haut -->
+		left: 0px;			<!-- position depuis la gauche -->
+		z-index: 1;			<!-- pour choisir l'ordre des images dans html -->
+		float:left,right,top,bottom;
+		overflow: auto;			<!-- scroller box -->
+		overflow-y: auto;
+		
+		overflow-x: hidden;		
+		margin: 0px 0px 0px 0px;	<!-- marge de la page -->
+		margin-right: 0px;		
+		margin-left: 0px;
+		margin-bottom: 0px;
+		margin-top: 0px
+		border: 0px ** rgb( 0, 0, 0);	<!-- bordure autour -->
+		border-right: 0px ** rgb( 0, 0, 0);
+		border-left: 0px ** rgb( 0, 0, 0);
+		border-bottom: 0px ** rgb( 0, 0, 0);
+		border-top: 0px ** rgb( 0, 0, 0);
+		** <!-- ridge, double, dotted, solid, dashed --> <!-- style de bordures -->
+		padding : 0px;			<!-- marge dans la box -->
+		clear: both;
+		
+	}
+
+	.class_choix
+	{
+		font-family: sans-serif;
+		font-size: 0px;
+		font-style: italic;
+		font-weight: bold;
+	}
+	
+	#id_choix
+	{
+		line-height: 0px;
+		text-align: center;
+		text-align: left;
+		text-align: right;
+		text-decoration: underline;
+	}
+
+</style>
+	</head>
+	<body>
+
+
+		<form action="mailto:fabien.MASSON@cpnv.ch" method="post" enctype="text/plain"> <!-- formulaire -->
+
+		<input type="text" name="fname" value="Valeur du champ par défaut">
+
+		<input type="password" name="lname" value="12345678910">
+
+		<textarea cols="30" rows="4"> zone de texte </textarea>
+		
+		
+		<!-- liste de choix multiple -->
+		<select name="pays" size="3" multiple>
+                	<option value="Vallist1" selected>Valeur Liste 1</option>
+                        <option value="Vallist2" selected>Valeur Liste 2</option>
+                        <option value="Vallist3">Valeur lsite 3</option>
+                </select>
+
+		<select name="pays">
+                        <option value="Vallist1">Valeur Liste 1</option>
+                        <option value="Vallist2">Valeur Liste 2</option>
+                	<option value="Vallist3">Valeur lsite 3</option>
+                </select>
+
+		<input type="checkbox" id="Case1" name="Case1" value="Choix case à cocher 1"/><label for="Case1">Choix case à cocher 1</label><br/>
+                <input type="checkbox" id="Case2" name="Case2" value="Choix case à cocher 2"/><label for="Case2">Choix case à cocher 2</label><br>
+                <input type="checkbox" id="Case3" name="Case3" value="Choix case à cocher 3"/><label for="Case3">Choix case à cocher 3</label>
+
+
+		<!-- bouton radio -->
+		<input type="radio" id="rad1" name="rad1" value="Bouton radio 1 "/><label for="rad1">Bouton Radio 1</label><br/>
+                <input type="radio" id="rad2" name="rad1" value="Bouton radio 2 "/><label for="rad2">Bouton Radio 2</label><br/>
+                <input type="radio" id="rad3" name="rad1" value="Bouton radio 3 "/><label for="rad3">Bouton Radio 3</label>
+
+
+		<input type="reset" value="Retour a la case départ"/>
+                <input type="submit" value="Envoyer la sauce"/>
+
+		<input type="date" value="jj.mm.aaaa"/>    <!-- date -->
+		
+		<input type="file"/> 			   <!-- fichier -->
+
+		<div>
+			pour grouper des long paragraphes ensembles
+		</div>
+
+		<span class =" class_choix ">  </span>
+
+		<table>
+
+			<thead>
+				<tr>
+					<th> en tête du tableau 1 </th>
+					<th> en tête du tableau 2 </th>
+					<th> en tête du tableau 3 </th>
+				</tr>
+
+			</thead>
+
+			<tbody>
+				<tr>	//ligne 1
+					<td colspan=2 > item du tableau 1 </td> 	<!-- pour fusioner 2 cellules du tableau en horizontale -->
+					<td> item du tableau 2 </td>			
+					<td rowspan=2 > item du tableau 3 </td>		<!-- pour fusioner 2 cellules du tableau en verticale-->
+				</tr>
+
+				<tr>	//ligne 2
+					<td> item du tableau 1 </td>
+					<td> item du tableau 2 </td>
+					<td> item du tableau 3 </td>
+				</tr>
+			</tbody>
+		</table>
+		
+
+		<a  target="_blank" href=" lien ou id de la page"> texte a afficher </a>		//target pour ouvrir dans une nouvelle page
+		
+		<!-- commentaire -->
+
+		<(balise a choix) class="class_choix">
+		<(balise a choix) id="id_choix">
+
+		<p> paragraphe </p>
+		<br> retour ligne
+		<em> italique </em>
+		<strong> gras </strong>
+		<h1> titre </h1> ... <h6></h6>
+
+		<ul type = " type de puce ">
+			<li> liste avec points </li>
+		</ul>
+		<ol>
+			<li> liste avec numeros </li>
+		</ol>
+
+		<img src=" url de l'image " alt " message d'aide " width=" largeur de l'image en pixels ">
+
+	</body>
+</html>

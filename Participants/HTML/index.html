@@ -1,6 +1,15 @@
+<!--
+/*
+Auteur : Kevin Vaucher
+Date : 04.11.2019
+Description : Page internet pour le module ICT-120
+Version : 1.0
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- On lie tous les documents utiles pour la mise en page et le travail sur le site (JS, CSS, Bootstrap, etc.)-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap.css">
@@ -8,17 +17,28 @@
     <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap-reboot.css">
 </head>
 <body>
-<img src="../Images/Logos/logo@2x.png" id="logocpnv"/>
-<h1 id="maintitle">Voyage d'études 2019</h1>
-<br>
-<div class="divCategories">
-    <input type="button" class="cmdCategories" value="Participants">
-    <input type="button" class="cmdCategories" value="Transports">
-    <input type="button" class="cmdCategories" value="Activités">
-    <input type="button" class="cmdCategories" value="Hébergement">
-    <input type="button" class="cmdCategories" value="Infos sur Pékin">
+<div id="divlogo" class="col-1">
+    <img src="../Images/Logos/logo@2x.png" id="logocpnv"/> <!--On place le logo du CPNV-->
 </div>
+<h1 id="maintitle">Voyage d'études 2019<br>Pékin, Chine</h1>
+<br>
+<div>
+    <ul> <!--On insère les boutons de navigation-->
+        <a href="index.html"><input type="button" class="cmdCategories" value="Participants" id="cmdParticipants"></a> <!-- On fait un lien vers la page Participants-->
+        <input type="button" class="cmdCategories" value="Transports" id="cmdTransports">
+        <input type="button" class="cmdCategories" value="Activités" id="cmdActivites">
+        <input type="button" class="cmdCategories" value="Hébergement" id="cmdHebergement">
+        <input type="button" class="cmdCategories" value="Infos sur Pékin" id="cmdInfos">
+    </ul>
+    <img src="../Images/PhotosPekin/pekin-MAX-w1000h600.jpg" id="divphoto">
+</div>
+<div id ="divContenu">
+    <table>
+        <tr>
 
+        </tr>
+    </table>
+</div>
 </body>
 <script src="../JS/code.js"></script>
 </html>
