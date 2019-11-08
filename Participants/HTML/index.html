@@ -23,8 +23,10 @@ Version : 1.0
 <h1 id="maintitle">Voyage d'études 2019<br>Pékin, Chine</h1>
 <br>
 <div>
-    <ul> <!--On insère les boutons de navigation-->
-        <a href="index.html"><input type="button" class="cmdCategories" value="Participants" id="cmdParticipants"></a> <!-- On fait un lien vers la page Participants-->
+    <ul>
+        <!-- On fait un lien vers la page Participants-->
+        <a href="index.html"><input type="button" class="cmdCategories" value="Participants" id="cmdParticipants"></a>
+        <!--On insère les boutons de navigation-->
         <input type="button" class="cmdCategories" value="Transports" id="cmdTransports">
         <input type="button" class="cmdCategories" value="Activités" id="cmdActivites">
         <input type="button" class="cmdCategories" value="Hébergement" id="cmdHebergement">
@@ -32,7 +34,22 @@ Version : 1.0
     </ul>
     <img src="../Images/PhotosPekin/pekin-MAX-w1000h600.jpg" id="divphoto">
     <div id="divContenu">
-        <div class="btn btn-danger col-2 bot" id="cmdAddCol">Ajouter une colonne</div>
+        <!-- On fait un tableau pour pouvoir insérer et supprimer des personnes -->
+        <table class="thBorder"id="tableContenu">
+            <thead>
+            <tr>
+                <th class="thBorder">Prénom</th>
+                <th class="thBorder">Nom</th>
+                <th class="thBorder">Classe</th>
+                <th class="thBorder">E-mail</th>
+                <th class="thBorder">Supprimer une colonne</th>
+            </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+        <div class="btn btn-danger" id="cmdAddLine">Ajouter une ligne</div>
+        <div class="btn btn-danger" id="cmdKill1">Supprimer</div>
     </div>
 </div>
 </body>

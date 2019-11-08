@@ -14,26 +14,11 @@ function init(){
     cmdHebergement.addEventListener("click", fnAlert)
     cmdInfos.addEventListener("click", fnAlert)
     cmdKill1.addEventListener("click", killLine)
-    cmdKill2.addEventListener("click", killLine)
-    cmdKill3.addEventListener("click", killLine)
     cmdAddLine.addEventListener("click",addLine)
-    cmdAddCol.addEventListener("click",addCol)
 }
 
 function fnAlert(){
     alert("Désolé, cette partie du site n'est pas encore disponible !");
-}
-
-function addCol()
-{
-    rows = tblBody.children
-    for (i=0; i<rows.length ; i++)
-    {
-        tr = rows[i]
-        newtd = document.createElement('td')
-        newtd.innerText = 'Nouvelle ligne '+i
-        tr.appendChild(newtd)
-    }
 }
 
 function addLine()
@@ -52,7 +37,7 @@ function addLine()
     newtr.appendChild(newtd1)
     newtr.appendChild(newtd2)
     newtr.appendChild(newtd3)
-    tblBody.appendChild(newtr)
+    tableBody.appendChild(newtr)
 }
 // Cette fonction est appelée au click sur un élément
 
@@ -64,3 +49,20 @@ function killLine(event) // Le paramètre event représente l'événement qui a 
     table = tr.parentNode   // table est la table dans laquelle la ligne se trouve
     table.removeChild(tr)   // On enlève la ligne de la table
 }
+
+
+
+/*
+Fonction pour ajouter une colonne
+function addCol()
+{
+    rows = tblBody.children
+    for (i=0; i<rows.length ; i++)
+    {
+        tr = rows[i]
+        newtd = document.createElement('td')
+        newtd.innerText = 'Nouvelle ligne '+i
+        tr.appendChild(newtd)
+    }
+}
+*/
