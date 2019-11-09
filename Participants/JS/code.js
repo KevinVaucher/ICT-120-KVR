@@ -21,41 +21,48 @@ function fnAlert() {
 }
 
 function addLine() {
-            newtr = document.createElement('tr')
-            newtd1 = document.createElement('td')
-            newtd1.innerText = (addPrenom.value)
-            newtd2 = document.createElement('td')
-            newtd2.innerText = (addNom.value)
-            newtd3 = document.createElement('td')
-            newtd3.innerText = (addClasse.value)
-            newtd4 = document.createElement('td')
-            newtd4.innerText = (addEmail.value)
-            newtd5 = document.createElement('td')
-            newbtn = document.createElement('div')
-            newtd5.appendChild(newbtn)
-            newbtn.classList = "btn btn-danger"
-            newbtn.innerText = 'Supprimer'
+    // Fonction pour ajouter une ligne au tableau
+    newtr = document.createElement("tr")
+    newtd1 = document.createElement("td")
+    newtd1.innerText = (addPrenom.value)
+    newtd2 = document.createElement("td")
+    newtd2.innerText = (addNom.value)
+    newtd3 = document.createElement("td")
+    newtd3.innerText = (addClasse.value)
+    linkmail = document.createElement("a")
+    linkmail.text = addEmail.value
+    linkmail.href = "mailto:" + addEmail.value
+    newtd4 = document.createElement("td")
+    newtd4.appendChild(linkmail)
+    newtd5 = document.createElement("td")
+    newbtn = document.createElement("div")
+    newtd5.appendChild(newbtn)
+    newbtn.classList = "btn btn-danger"
+    newbtn.innerText = "Supprimer"
 
-            newdiv = document.createElement('div')
-            newbtn.addEventListener('click', killLine)
-            newtd3.appendChild(newdiv)
-            newtr.appendChild(newtd1)
-            newtr.appendChild(newtd2)
-            newtr.appendChild(newtd3)
-            newtr.appendChild(newtd4)
-            newtr.appendChild(newtd5)
-            tableBody.appendChild(newtr)
 
-            addPrenom.value = ("")
-            addNom.value = ("")
-            addClasse.value = ("")
-            addEmail.value = ("")
+    newdiv = document.createElement("div")
+    newbtn.addEventListener("click", killLine)
+    newtd3.appendChild(newdiv)
+    newtr.appendChild(newtd1)
+    newtr.appendChild(newtd2)
+    newtr.appendChild(newtd3)
+    newtr.appendChild(newtd4)
+    newtr.appendChild(newtd5)
+    tableBody.appendChild(newtr)
+
+    // Remise des valeurs des champs textes à 0 une fois que la ligne est ajoutée
+    addPrenom.value = ("")
+    addNom.value = ("")
+    addClasse.value = ("")
+    addEmail.value = ("")
 }
 
 // Cette fonction est appelée au clic sur un élément
 
 function killLine(event) // Le paramètre event représente l'événement qui a causé l'appel à la fonction
 {
+    // Fonction pour supprimer une ligne
     button = event.target   // La cible ('target') de l'événement est le bouton (un élément du DOM)
     td = button.parentNode  // td est la cellule dans laquelle le bouton se trouve
     tr = td.parentNode      // tr est la ligne ('row') dans laquelle la cellule se trouve

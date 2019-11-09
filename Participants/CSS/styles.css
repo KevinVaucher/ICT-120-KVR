@@ -54,6 +54,7 @@ ul {
 
 #tableContenu {
     width: 100%;
+    text-align: center;
 }
 
 .thBorder{
@@ -62,11 +63,6 @@ ul {
     border-color:black;
     width:20%;
     text-align : center;
-}
-
-#cmdKill1{
-    float : right;
-    width : 20%;
 }
 
 .addValues{
