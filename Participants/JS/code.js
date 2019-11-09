@@ -8,38 +8,51 @@ Version : 1.0
 document.addEventListener("DOMContentLoaded", init)
 
 // On initialise des "écoutes" d'évènement
-function init(){
+function init() {
     cmdTransports.addEventListener("click", fnAlert)
     cmdActivites.addEventListener("click", fnAlert)
     cmdHebergement.addEventListener("click", fnAlert)
     cmdInfos.addEventListener("click", fnAlert)
-    cmdKill1.addEventListener("click", killLine)
-    cmdAddLine.addEventListener("click",addLine)
+    cmdAddLine.addEventListener("click", addLine)
 }
 
-function fnAlert(){
+function fnAlert() {
     alert("Désolé, cette partie du site n'est pas encore disponible !");
 }
 
-function addLine()
-{
-    newtr = document.createElement('tr')
-    newtd1 = document.createElement('td')
-    newtd1.innerText = 'Ma'
-    newtd2 = document.createElement('td')
-    newtd2.innerText = 'Dalton'
-    newtd3 = document.createElement('td')
-    newdiv = document.createElement('div')
-    newdiv.innerText = 'Supprimer'
-    newdiv.className = 'btn btn-danger'
-    newdiv.addEventListener('click',killLine)
-    newtd3.appendChild(newdiv)
-    newtr.appendChild(newtd1)
-    newtr.appendChild(newtd2)
-    newtr.appendChild(newtd3)
-    tableBody.appendChild(newtr)
+function addLine() {
+            newtr = document.createElement('tr')
+            newtd1 = document.createElement('td')
+            newtd1.innerText = (addPrenom.value)
+            newtd2 = document.createElement('td')
+            newtd2.innerText = (addNom.value)
+            newtd3 = document.createElement('td')
+            newtd3.innerText = (addClasse.value)
+            newtd4 = document.createElement('td')
+            newtd4.innerText = (addEmail.value)
+            newtd5 = document.createElement('td')
+            newbtn = document.createElement('div')
+            newtd5.appendChild(newbtn)
+            newbtn.classList = "btn btn-danger"
+            newbtn.innerText = 'Supprimer'
+
+            newdiv = document.createElement('div')
+            newbtn.addEventListener('click', killLine)
+            newtd3.appendChild(newdiv)
+            newtr.appendChild(newtd1)
+            newtr.appendChild(newtd2)
+            newtr.appendChild(newtd3)
+            newtr.appendChild(newtd4)
+            newtr.appendChild(newtd5)
+            tableBody.appendChild(newtr)
+
+            addPrenom.value = ("")
+            addNom.value = ("")
+            addClasse.value = ("")
+            addEmail.value = ("")
 }
-// Cette fonction est appelée au click sur un élément
+
+// Cette fonction est appelée au clic sur un élément
 
 function killLine(event) // Le paramètre event représente l'événement qui a causé l'appel à la fonction
 {
@@ -49,7 +62,6 @@ function killLine(event) // Le paramètre event représente l'événement qui a 
     table = tr.parentNode   // table est la table dans laquelle la ligne se trouve
     table.removeChild(tr)   // On enlève la ligne de la table
 }
-
 
 
 /*

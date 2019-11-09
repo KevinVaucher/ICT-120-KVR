@@ -22,6 +22,7 @@ Version : 1.0
     background-color: #34ce57;
     vertical-align: middle;
     height:55px;
+    font-weight: bold;
 }
 
 #divphoto {
@@ -42,7 +43,6 @@ ul {
 }
 
 #divContenu {
-    border: 1px solid;
     margin-top: 100px;
     margin-left : 380px;
     height:500px;
@@ -67,4 +67,9 @@ ul {
 #cmdKill1{
     float : right;
     width : 20%;
+}
+
+.addValues{
+    width:20%;
+    line-height:0px;
 }
