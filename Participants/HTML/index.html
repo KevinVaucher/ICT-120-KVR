@@ -11,51 +11,59 @@ Version : 1.0
 <head>
     <!-- On lie tous les documents utiles pour la mise en page et le travail sur le site (JS, CSS, Bootstrap, etc.)-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap-grid.css">
-    <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap-reboot.css">
+    <!--On met cette ligne pour pouvoir mettre des accents dans les titres et le contenu-->
+    <link rel="stylesheet" href="../CSS/styles.css"><!--On lie le CSS avec le html-->
+    <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap.css"><!--On lie le bootstrap avec le html-->
+    <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap-grid.css"><!--On lie le 2ème bootstrap avec le html-->
+    <link rel="stylesheet" href="../Bootstrap/dist/css/bootstrap-reboot.css"><!--On lie le ème bootstrap avec le html-->
 </head>
 <body>
-<div id="divlogo" class="col-1">
-    <img src="../Images/Logos/logo@2x.png" id="logocpnv"/> <!--On place le logo du CPNV-->
-</div>
-<h1 id="maintitle">Voyage d'études 2019<br>Pékin, Chine</h1>
-<br>
-<div>
-    <ul>
-        <!-- On fait un lien vers la page Participants-->
-        <a href="index.html"><input type="button" class="cmdCategories" value="Participants" id="cmdParticipants"></a>
-        <!--On insère les boutons de navigation-->
-        <input type="button" class="cmdCategories" value="Transports" id="cmdTransports">
-        <input type="button" class="cmdCategories" value="Activités" id="cmdActivites">
-        <input type="button" class="cmdCategories" value="Hébergement" id="cmdHebergement">
-        <input type="button" class="cmdCategories" value="Infos sur Pékin" id="cmdInfos">
-    </ul>
-    <img src="../Images/PhotosPekin/pekin-MAX-w1000h600.jpg" id="divphoto">
-    <div id="divContenu">
-        <!-- On fait un tableau pour pouvoir insérer et supprimer des personnes -->
-        <table class="table table-bordered" id="tableContenu">
-            <thead>
-            <tr>
-                <th class="thBorder">Prénom</th>
-                <th class="thBorder">Nom</th>
-                <th class="thBorder">Classe</th>
-                <th class="thBorder">E-mail</th>
-                <th class="thBorder">Supprimer une ligne</th>
-            </tr>
-            </thead>
-            <tbody id="tableBody">
-            </tbody>
-        </table>
-        <input type="text" class="addValues" placeholder="Prénom de la personne" id="addPrenom">
-        <input type="text" class="addValues" placeholder="Nom de la personne" id="addNom">
-        <input type="text" class="addValues" placeholder="Classe de la personne" id="addClasse">
-        <input type="text" class="addValues" placeholder="E-mail de la personne" id="addEmail">
-        <br>
-        <div class="btn btn-danger" id="cmdAddLine">Ajouter une ligne</div>
+    <div id="divlogo" class="col-1">
+        <img src="../Images/Logos/logo@2x.png" id="logocpnv"/> <!--On place le logo du CPNV-->
     </div>
-</div>
+    <h1 id="maintitle">Voyage d'études 2019<br>Pékin, Chine</h1> <!--On place le titre de la page-->
+    <br>
+    <div>
+        <ul>
+            <!-- On fait un lien vers la page Participants-->
+            <a href="index.html"><input type="button" class="cmdCategories" value="Participants" id="cmdParticipants"></a>
+            <!--On insère les boutons de navigation vers les autres onglets-->
+            <input type="button" class="cmdCategories" value="Transports" id="cmdTransports">
+            <input type="button" class="cmdCategories" value="Activités" id="cmdActivites">
+            <input type="button" class="cmdCategories" value="Hébergement" id="cmdHebergement">
+            <input type="button" class="cmdCategories" value="Infos sur Pékin" id="cmdInfos">
+        </ul>
+        <img src="../Images/PhotosPekin/pekin-MAX-w1000h600.jpg" id="divphoto"> <!--On place une image de Pékin-->
+        <div id="divContenu">
+        <!-- On fait un tableau pour pouvoir insérer et supprimer des personnes -->
+            <table class="table table-bordered" id="tableContenu">
+                <thead>
+                    <tr>
+                        <!--On crée des en-têtes pour le tableau-->
+                        <th class="thBorder">Prénom</th>
+                        <th class="thBorder">Nom</th>
+                        <th class="thBorder">Classe</th>
+                        <th class="thBorder">E-mail</th>
+                        <th class="thBorder">Supprimer une ligne</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+            <!--On crée des zones de texte pour que l'utilisateur puisse introduire des données dans le tableau-->
+            <input type="text" class="addValues" placeholder="Prénom de la personne" id="addPrenom">
+            <input type="text" class="addValues" placeholder="Nom de la personne" id="addNom">
+            <input type="text" class="addValues" placeholder="Classe de la personne" id="addClasse">
+            <input type="text" class="addValues" placeholder="E-mail de la personne" id="addEmail">
+
+            <!--On crée un bouton pour ajouter une ligne-->
+            <br>
+            <div class="btn btn-danger" id="cmdAddLine">
+                Ajouter une ligne
+            </div>
+        </div>
+    </div>
 </body>
+<!--On lie le javascript avec le html-->
 <script src="../JS/code.js"></script>
 </html>

@@ -5,9 +5,9 @@ Description : Page internet pour le module ICT-120
 Version : 1.0
  */
 
-document.addEventListener("DOMContentLoaded", init)
+document.addEventListener("DOMContentLoaded", init) // Permet d'appeler la fonction init dès l'affichage de la page
 
-// On initialise des "écoutes" d'évènement
+// On initialise des "écoutes" d'évènement dès l'affichage de la page
 function init() {
     cmdTransports.addEventListener("click", fnAlert)
     cmdActivites.addEventListener("click", fnAlert)
@@ -16,33 +16,34 @@ function init() {
     cmdAddLine.addEventListener("click", addLine)
 }
 
+// Permet d'afficher un message d'alerte lorsqu'on clique sur un autre onglet que "Participants"
 function fnAlert() {
     alert("Désolé, cette partie du site n'est pas encore disponible !");
 }
 
+// Permet d'ajouter une ligne au tableau
 function addLine() {
     // Fonction pour ajouter une ligne au tableau
-    newtr = document.createElement("tr")
-    newtd1 = document.createElement("td")
-    newtd1.innerText = (addPrenom.value)
-    newtd2 = document.createElement("td")
-    newtd2.innerText = (addNom.value)
-    newtd3 = document.createElement("td")
-    newtd3.innerText = (addClasse.value)
-    linkmail = document.createElement("a")
-    linkmail.text = addEmail.value
-    linkmail.href = "mailto:" + addEmail.value
-    newtd4 = document.createElement("td")
+    newtr = document.createElement("tr") // On crée un élément "tr"
+    newtd1 = document.createElement("td") // On crée un élément "td1"
+    newtd1.innerText = (addPrenom.value) // On applique la valeur de ce que l'utilisateur a entré pour la td1 (colonne "prénom")
+    newtd2 = document.createElement("td") // On crée un élément "td1"
+    newtd2.innerText = (addNom.value) // On applique la valeur de ce que l'utilisateur a entré pour la td1 (colonne "prénom")
+    newtd3 = document.createElement("td") // On crée un élément "td1"
+    newtd3.innerText = (addClasse.value) // On applique la valeur de ce que l'utilisateur a entré pour la td1 (colonne "prénom")
+    linkmail = document.createElement("a") // On crée un élément "linkmail" pour transformer la valeur de la colonne "E-mail" en mailto
+    linkmail.text = addEmail.value // On applique la valeur de ce que l'utilisateur a entré pour la td1 (colonne "prénom")
+    linkmail.href = "mailto:" + addEmail.value // On indique que la valeur de la colonne "E-mail" est un e-mail
+    newtd4 = document.createElement("td") // On crée un élément "td1"
     newtd4.appendChild(linkmail)
-    newtd5 = document.createElement("td")
-    newbtn = document.createElement("div")
+    newtd5 = document.createElement("td") // On crée un élément "td1"
+    newbtn = document.createElement("div") // On crée un élément "newbtn" qui sera pour supprimer la ligne
     newtd5.appendChild(newbtn)
-    newbtn.classList = "btn btn-danger"
-    newbtn.innerText = "Supprimer"
-
+    newbtn.classList = "btn btn-danger" // On applique la classe bootstrap pour le bouton supprimer
+    newbtn.innerText = "Supprimer" // On indique la valeur du texte du bouton supprimer
 
     newdiv = document.createElement("div")
-    newbtn.addEventListener("click", killLine)
+    newbtn.addEventListener("click", killLine) // On indique qu'il faut appeler la fonction killLine dès qu'on clique sur le bouton supprimer
     newtd3.appendChild(newdiv)
     newtr.appendChild(newtd1)
     newtr.appendChild(newtd2)
@@ -58,11 +59,9 @@ function addLine() {
     addEmail.value = ("")
 }
 
-// Cette fonction est appelée au clic sur un élément
-
+// Fonction pour supprimer une ligne
 function killLine(event) // Le paramètre event représente l'événement qui a causé l'appel à la fonction
 {
-    // Fonction pour supprimer une ligne
     button = event.target   // La cible ('target') de l'événement est le bouton (un élément du DOM)
     td = button.parentNode  // td est la cellule dans laquelle le bouton se trouve
     tr = td.parentNode      // tr est la ligne ('row') dans laquelle la cellule se trouve

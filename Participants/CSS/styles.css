@@ -6,32 +6,32 @@ Version : 1.0
  */
 
 
-#logocpnv {
+#logocpnv { /*ID de l'image pour lui mettre la bonne taille*/
     height: 85px;
     width: 170px;
 }
 
-#maintitle {
+#maintitle { /*ID du titre pour lui mettre la bonne taille*/
     text-align: center;
     margin-top: -70px;
 }
 
-.cmdCategories {
+.cmdCategories { /*Classe des onglets afin décorer et les placer*/
     text-align: center;
     width: 19.77%;
     background-color: #34ce57;
     vertical-align: middle;
-    height:55px;
+    height: 55px;
     font-weight: bold;
 }
 
-#divphoto {
+#divphoto { /*ID de la photo de Pékin pour pouvoir la  placer*/
     float: left;
     vertical-align: middle;
     margin-top: 100px;
 }
 
-body {
+body { /*On change le body pour pouvoir lui appliquer un padding de base*/
     padding: 20px 0px 0px 0px;
 }
 
@@ -42,30 +42,30 @@ ul {
     list-style: none;
 }
 
-#divContenu {
+#divContenu { /*On place et taille comme il faut le tableau*/
     margin-top: 100px;
-    margin-left : 380px;
-    height:500px;
+    margin-left: 380px;
+    height: 500px;
 }
 
-.bot{
-    vertical-align:bottom;
+.bot { /*Classe pour pouvoir placer n'importe quel élément en bas*/
+    vertical-align: bottom;
 }
 
-#tableContenu {
+#tableContenu { /*ID pour pouvoir modifier la taille et le placement du contenu du tableau*/
     width: 100%;
     text-align: center;
 }
 
-.thBorder{
-    border-width:1px;
-    border-style:solid;
-    border-color:black;
-    width:20%;
-    text-align : center;
+.thBorder { /*Classe pour pouvoir appliquer une bordure au tableau, et le changer de place*/
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 20%;
+    text-align: center;
 }
 
-.addValues{
-    width:20%;
-    line-height:0px;
+.addValues { /**/
+    width: 20%;
+    line-height: 0px;
 }
