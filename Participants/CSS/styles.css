@@ -11,7 +11,7 @@ Version : 1.0
     width: 170px;
 }
 
-#maintitle { /*ID du titre pour lui mettre la bonne taille*/
+.mainTitle { /*Classe du titre pour lui mettre la bonne taille, lui et les autres titres s'il y en a*/
     text-align: center;
     margin-top: -70px;
 }
@@ -25,7 +25,7 @@ Version : 1.0
     font-weight: bold;
 }
 
-#divphoto { /*ID de la photo de Pékin pour pouvoir la  placer*/
+.classPhotos { /*Class de la photo de Pékin pour pouvoir la  placer, elle et les autres images s'il y en a*/
     float: left;
     vertical-align: middle;
     margin-top: 100px;
@@ -48,10 +48,6 @@ ul {
     height: 500px;
 }
 
-.bot { /*Classe pour pouvoir placer n'importe quel élément en bas*/
-    vertical-align: bottom;
-}
-
 #tableContenu { /*ID pour pouvoir modifier la taille et le placement du contenu du tableau*/
     width: 100%;
     text-align: center;
@@ -65,6 +61,6 @@ ul {
     text-align: center;
 }
 
-.addValues { /*Permet de tailler les zones de textes pour ajouter des valeurs au tableau*/
+.addValues { /*Permet de tailler les zones de textes pour ajouter des valeurs au tableau */
     width: 20%;
 }
