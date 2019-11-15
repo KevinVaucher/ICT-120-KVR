@@ -1,0 +1,30 @@
+<!--
+Auteur : Kevin Vaucher
+Projet : Examen ICT-120
+Version : 1.0
+Date : 15.11.2019
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="motivation.js"></script> <!--Liaison avec le javascript de la page motivation-->
+    <title>Motivation</title> <!--Titre de la page-->
+</head>
+<body>
+<div class="container-fluid flex-column">
+    <h2>Bonjour <span id="titleFirstName">(prénom)</span> <span id="titleLastName">(nom)</span></h2> <!--Titre de la page-->
+    <form action="thankyou.html"> <!--Renvoie sur la page de remerciement-->
+        <label>Veuillez décrire ci-dessous votre motivation à nous rejoindre, en au minimum 30 caractères et au maximum 144</label>
+        <br>
+        <textarea onkeyup="calculRestants(this.value);" cols="60" rows="3" id="txtMotivation"></textarea> <!--Définit la taille et la largeur du textarea-->
+        <br>
+        <div id="txtMotivationCheck">Cette description est trop courte</div>
+        Il vous reste <span id="nbCaracteres">144</span> caractères <!--Affiche le nombre de caractères qui restent-->
+        <br>
+        <input type="submit" value="Ok" id="cmdOk"> <!--Valide le formulaire et renvoie sur la page de remerciement-->
+    </form>
+</div>
+</body>
+</html>

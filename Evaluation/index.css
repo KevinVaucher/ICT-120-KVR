@@ -1,0 +1,11 @@
+/*
+Auteur : Kevin Vaucher
+Projet : Examen ICT-120
+Version : 1.0
+Date : 15.11.2019
+*/
+
+/*Classe pour rendre les messages d'alerte invisibles*/
+.HideCheck {
+    visibility: hidden;
+}
